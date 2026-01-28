@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body class="flex flex-col items-center justify-center h-screen">
+    <div class="w-full max-w-2xl px-4">
+      <h1 class="text-2xl text-center">
+        <a href="index.html">Rock Paper Scissors</a>
+      </h1>
+      <!--Score section-->
+      <div class="card bg-white p-4 mb-8 flex justify-around">
+        <p class="style text-center px-8 pr-14">
+          <span class="number" id="wins">0</span>
+          <span>Wins</span>
+        </p>
+        <p class="style text-center border-l border-r border-gray-300 px-8">
+          <span class="number" id="draws">0</span>
+          <span>Draws</span>
+        </p>
+        <p class="style text-center border-gray-300 px-8 pl-14">
+          <span class="number" id="losses">0</span>
+          <span>Losses</span>
+        </p>
+      </div>
+      <!--Choice section-->
+      <div class="card-choice bg-white p-4 my-8">
+        <div class="grid grid-cols-3 gap-12 mb-8">
+          <p class="text-sm text-gray-500 mb-4 text-center">
+            You <span id="user-display"></span>
+          </p>
+          <div class="text-center">
+            <p class="text-gray-400 text-sm" id="result-text">VS</p>
+          </div>
+          <p class="text-sm text-gray-500 mb-4 text-center">
+            Computer <span id="computer-display"></span>
+          </p>
+        </div>
+      </div>
+      <!--Button Section-->
+      <div class="grid grid-cols-3 gap-4">
+        <button id="btn" data-choice="Rock">
+          <img src="assets/download.png" class="w-24 h-24 mx-auto mb-4" />Rock
+        </button>
+        <button id="btn" data-choice="Paper">
+          <img src="assets/paper.png" class="w-24 h-24 mx-auto mb-4" /> Paper
+        </button>
+        <button id="btn" data-choice="Scissors">
+          <img src="assets/scissor.png" class="w-24 h-24 mx-auto mb-4" />
+          Scissors
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
